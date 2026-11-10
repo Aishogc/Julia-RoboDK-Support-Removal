@@ -1,0 +1,7 @@
+{
+  "name": "Julia STL Support Viewer",
+  "build": {"dockerfile": "Dockerfile"},
+  "forwardPorts": [8080],
+  "portsAttributes": {"8080": {"label": "STL Support Viewer", "onAutoForward": "openBrowser"}},
+  "postCreateCommand": "julia --project=. -e 'using Pkg; Pkg.instantiate()'"
+}
